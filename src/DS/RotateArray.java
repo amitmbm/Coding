@@ -5,13 +5,13 @@ public class RotateArray {
 	
 	public static void main(String args[])
 	{
-		 int arr[] = {10 ,9 ,8 ,7 ,1 ,2,3,4,5,6};
+		 int arr[] = {10 ,9 ,8 ,7 ,6,5,1 ,2,3,4,5,6};
 		 
 		 int low=0;
-		 int high=9;
+		 int high=11;
 		 int mid=0;
 		// System.out.println("enter number to search");
-		 int item=6;
+		 int item=1;
 		 while(low<=high)
 		 {
 			 mid=(low+high)/2;
@@ -24,9 +24,7 @@ public class RotateArray {
 			 else if((item > arr[mid] && item <= arr[high]) || (item < arr[mid] && item >=arr[high]))
 				 low=mid+1;
 			 else if((item > arr[mid] && item > arr[high]) || (item < arr[mid] && item < arr[high]))
-				// {)
 			    high=mid-1;
-				// }
 		 }
 		 System.out.println("item is not in the Array");
 	}

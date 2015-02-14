@@ -5,27 +5,7 @@ package DS;
  * @author KH1871
  *
  */
-class Tree
-{
-	int data;
-	Tree left;
-	Tree right;
-	
-	Tree(int data)
-	{
-		this.data=data;
-		this.left=null;
-		this.right=null;
-	}
 
-	@Override
-	public String toString() {
-		return "Tree [data=" + data + ", left=" + left + ", right=" + right
-				+ "]";
-	}
-	
-	
-}
 public class IsBst {
 
 	static Tree prev=null;

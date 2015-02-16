@@ -9,12 +9,11 @@ public class BufferedReaderEx {
 		// TODO Auto-generated method stub
 
 		
-		 System.out.println("Name: ");
 		  try{
 		     BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
 		     String inputString = bufferRead.readLine();
 		      String arr[] = inputString.split(" ");
-		     System.out.println("Name entered : " + arr[0] + "surname"+ arr[1]);
+		     System.out.println("N : " + arr[0] + "M"+ arr[1]);
 		 }
 		 catch(IOException ex)
 		 {

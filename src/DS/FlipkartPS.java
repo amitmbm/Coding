@@ -4,7 +4,7 @@ public class FlipkartPS {
 	
 	public static void main(String args[])
 	{
-		int number=31;
+		int number=125;
 		System.out.println("nearest possible number is "+ fn(number)+"which is the squareroot of given number"+ number);
 	}
 

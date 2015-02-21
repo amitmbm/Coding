@@ -9,6 +9,8 @@ public class StringArrayprint {
 	{
 		String[] Arr = new String[3];
 		char a[]={'a','b','c'};
+		int ia[] = {1,2,3};
+		System.out.println("print"+ia.toString());
 		String b = new String(a);
 		System.out.println("printing the char array"+ b );
 		Arr[0]="Amit";

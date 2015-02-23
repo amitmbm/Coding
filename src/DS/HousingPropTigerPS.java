@@ -2,7 +2,7 @@ package DS;
 
 // this can be solved only by two conditions
 // modified the code with the correct conditions
-// just need to check that initial point of both the lines , comes in b/w the other lines
+// just need to check that initial point of both the lines , comes in b/w the other lines.
 
 public class HousingPropTigerPS {
 

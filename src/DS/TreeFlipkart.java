@@ -38,11 +38,12 @@ public class TreeFlipkart {
 		root.left.right= new Tree1(6);
 		System.out.println(root);
 		//IsBst isBst = new IsBst();
-		int floor =TreeFlipkart.getFloor(root , 3);
+		int floor =TreeFlipkart.getFloor(root , 10);
 		System.out.println("given number's floor is ::"+ floor);
 	}
 	// this impl is perfect , any other approach might give wrong result
 	// like i tried to remove prev and was just comparing root with its left and right , which is not a right app.
+	// it seems this code has a bug , cause if i give 10 , then it returns 10 only .
 	
 	public static int getFloor(Tree1 root , int number)
 	{

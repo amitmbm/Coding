@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Test {
+public class ExotelPS {
 	
 	public static void main(String args[])
 	{

@@ -8,6 +8,7 @@ public class TestNGAnnotations {
 	public static void main(){
 		TestNGAnnotations testNGAnnotations = new TestNGAnnotations();
 		Assert.assertNotNull(testNGAnnotations, "i am  testing this feature");
+		System.out.println("i am printing this");
 	}
 
 	

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /*
- * this is just for 10.
+ * this is just for 4 server and load on servers are 70 . 70 and need to dist 35
  */
 
 public class LoadBalance15 {
@@ -21,26 +21,24 @@ public class LoadBalance15 {
       
       int low_cnt=0,high_cnt=0;
       int sec_cnt=0;
-      //high=28;
+      //high=2;
       /*if(low == high)
     	  low_cnt=high_cnt=(a.length)/2;*/
-      while(sec_cnt < 40 && low_cnt !=4 )
+      while(sec_cnt < 40 && (low_cnt !=4) )
       {
     	 
     	  for(int i=0;i<a.length;i++)
     	  {
-    		  if(i==0 && a[i]>a[i+1] )// remove third &&
+    		  if(i==0 && a[i]>a[i+1] )
     		  {
     			  a[i]-=1;
     			  a[i+1]+=1;
-    			  //System.out.println("first"+i);
     			  
     		  }
-    		  else if(i==a.length-1 && a[i]>a[i-1] )// remove third &&
+    		  else if(i==a.length-1 && a[i]>a[i-1] && a[i]!=1 )
     		  {
     			  a[i]-=1;
     			  a[i-1]+=1;
-    			  //System.out.println("last"+i);
     		  }
     		  else if(i>0 && i< a.length-1)
     		  {
@@ -50,7 +48,7 @@ public class LoadBalance15 {
 							a[i - 1] += 1;
 							a[i] -= 1;
 						}
-						if(a[i] > a[i+1] && a[i+1]<high){
+						if(a[i] > a[i+1] ){
 							a[i + 1] += 1;
 							a[i] -= 1;
 						}
@@ -63,7 +61,7 @@ public class LoadBalance15 {
 					}*/
 					else if(a[i] > a[i + 1])
 					{
-						a[i]-=1;
+						  a[i]-=1;
 	        			  a[i+1]+=1;
 					}
 					else if(a[i] > a[i - 1] && a[i] > a[i + 1] && a[i]-a[i-1]==1)
@@ -81,7 +79,7 @@ public class LoadBalance15 {
     		      		 
     	  }
     	 // System.out.println("array After loop"+ Arrays.toString(a));
-    	  System.out.println("array before loop"+ Arrays.toString(a));
+    	  System.out.println("array After loop"+ Arrays.toString(a));
     	  low_cnt=0;
     	  high_cnt=0;
     	  for(int i=0;i<a.length;i++)

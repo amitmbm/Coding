@@ -3,6 +3,14 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ *  test case for snapdeal solution
+ *  snapdealmobile
+ *  snap , deal , mobile , snapdeal 
+ *  and answer will be snap deal mobile
+ *  cause snap and deal will come before snapdeal in dictionary hence lexi it is small.
+ */
+
 public class SnapdealSolution {
 
 	public static void f(int dp[], int n, int k, String s) {
@@ -22,26 +30,28 @@ public class SnapdealSolution {
 		String str = bufferRead.readLine();
 		int N = Integer.parseInt(str);
 		String arr[] = new String[N];
-		Map<String, Boolean> mp = new HashMap<String, Boolean>();
+		// building a given dictionary
+		Map<String, Boolean> dict = new HashMap<String, Boolean>();
 		for (int i = 0; i < N; i++) {
 			// arr[i]= bufferRead.readLine();
-			mp.put(bufferRead.readLine(), true);
+			dict.put(bufferRead.readLine(), true);
 			// System.out.println(arr[i]);
 		}
+		// query or word which we need to search
 		String query = bufferRead.readLine();
 		int n = query.length();
 		int dp[] = new int[n];
 		if (query.length() <= 500) {
 			for (int i = 0; i < n; i++)
 				dp[i] = -1;
-			if (mp.containsKey(query.substring(0, 1)))
+			if (dict.containsKey(query.substring(0, 1)))
 				dp[0] = -1;
 			for (int i = 0; i < n; i++) {
-				if (mp.containsKey(query.substring(0, i + 1)))
+				if (dict.containsKey(query.substring(0, i + 1)))
 					dp[i] = 0;
 				for (int j = 0; j < i; j++) {
 					if ((dp[j] != -1)
-							&& mp.containsKey(query.substring(j + 1, i + 1))) {
+							&& dict.containsKey(query.substring(j + 1, i + 1))) {
 						dp[i] = j;
 						break;
 					}

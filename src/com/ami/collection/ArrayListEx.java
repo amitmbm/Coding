@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class ArrayListEx {
 
@@ -13,6 +15,17 @@ public class ArrayListEx {
 		
 		int a[]={10,2,3,4};
         List<int[]> num = Arrays.asList(a);
+        ArrayList<Integer> ll = new ArrayList<Integer>(10);
+        Map<String,String> mp = new HashMap<String, String>(10, 6);
+        for(int i=0;i<10;i++)
+        {
+        	mp.put("s"+i, "s"+i);
+        }
+        List<Integer> lll = new LinkedList<Integer>();
+        //lll.add(10, 78);
+        //ll.add(5,10);
+        System.out.println("size of my lAl"+ll.size());
+        System.out.println("el"+lll);
         LinkedList<String> list = new LinkedList<String>();
         list.add("abc");
         list.add("def");

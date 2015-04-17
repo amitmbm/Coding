@@ -8,14 +8,14 @@ package DS;
 
 public class IsBst {
 
-	static Tree prev=null;
+	static TreeNode prev=null;
 	public static void main(String args[])
 	{
-		Tree root= new Tree(10);
-		root.left=new Tree(2);
-		root.right=new Tree(16);
-		root.left.left= new Tree(1);
-		root.left.right= new Tree(16);
+		TreeNode root= new TreeNode(10);
+		root.left=new TreeNode(2);
+		root.right=new TreeNode(16);
+		root.left.left= new TreeNode(1);
+		root.left.right= new TreeNode(16);
 		System.out.println(root);
 		//IsBst isBst = new IsBst();
 		boolean tree=IsBst.IsBstTree(root);
@@ -24,7 +24,7 @@ public class IsBst {
 	// this impl is perfect , any other approach might give wrong result
 	// like i tried to remove prev and was just comparing root with its left and right , which is not a right app.
 	
-	public static boolean IsBstTree(Tree root)
+	public static boolean IsBstTree(TreeNode root)
 	{
 		
 		if(root!=null)

@@ -35,22 +35,25 @@ public class MapEx {
 		System.out.println("comparing two map"+ linkedmap.equals(sortedmap));
 		System.out.println("linked hash map will print in the same order as inserted" + linkedmap);
 		
-		 Map<String,String> map = new HashMap<String,String>();
+		 Map<Object,String> map = new HashMap<Object,String>();
 	      
 	      // populate the map
 	      map.put("1","TP"); 
 	      map.put("2","IS");
 	      map.put("3","BEST");
 	      map.put("4","an");
+	      //System.out.println(map.put("3", "three"));
+	      System.out.println(map.put(new String("3"), "four"));
 	      
-	      System.out.println("******************* for loop to travel the each element in the hashmap ***************");
+	      
+	     // System.out.println("******************* for loop to travel the each element in the hashmap ***************");
 	   // more elegant way
-	  	for (Map.Entry<String, String> entry : map.entrySet()) {
+	  	/*for (Map.Entry<String, String> entry : map.entrySet()) {
 	  		System.out.println("Key : " + entry.getKey() + " Value : "
 	  			+ entry.getValue());
 	  	}
-	      
-	      System.out.println("printing the map which will not gurantee the order" + map);
+	      */
+	      System.out.println("**********************printing the map which will not gurantee the order##########3" + map);
 	      
 	      Map<String , Integer> simap = new TreeMap<String, Integer>();
 			//sortedmap.put("ANIT", new Integer(0));

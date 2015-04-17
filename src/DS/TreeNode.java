@@ -1,12 +1,12 @@
 package DS;
 
-public class Tree
+public class TreeNode
 {
 	int data;
-	Tree left;
-	Tree right;
+	TreeNode left;
+	TreeNode right;
 	
-	Tree(int data)
+	TreeNode(int data)
 	{
 		this.data=data;
 		this.left=null;
@@ -19,7 +19,7 @@ public class Tree
 				+ "]";
 	}
 	
-	public static void print (Tree root)
+	public static void print (TreeNode root)
 	{
         if(root == null)
         	return;

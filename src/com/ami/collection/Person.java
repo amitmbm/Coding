@@ -32,29 +32,68 @@ public class Person implements Comparable<Person>{
 		this.nationality = nationality;
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
 	@Override
-	public boolean equals(Object object) {
-		boolean result = false;
-		if (object == null || object.getClass() != getClass()) {
-			result = false;
-		} else {
-			Person person = (Person) object;
-			if (this.name == person.getName()
-					&& this.nationality == person.getNationality()) {
-				result = true;
-			}
-		}
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((companyName == null) ? 0 : companyName.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result
+				+ ((nationality == null) ? 0 : nationality.hashCode());
 		return result;
 	}
 
-	// just omitted null checks
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
-	public int hashCode() {
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof Person)) {
+			return false;
+		}
+		Person other = (Person) obj;
+		if (companyName == null) {
+			if (other.companyName != null) {
+				return false;
+			}
+		} else if (!companyName.equals(other.companyName)) {
+			return false;
+		}
+		if (name == null) {
+			if (other.name != null) {
+				return false;
+			}
+		} else if (!name.equals(other.name)) {
+			return false;
+		}
+		if (nationality == null) {
+			if (other.nationality != null) {
+				return false;
+			}
+		} else if (!nationality.equals(other.nationality)) {
+			return false;
+		}
+		return true;
+	}
+
+	// just omitted null checks
+	//@Override
+	/*public int hashCode() {
 		int hash = 3;
 		hash = 7 * hash + this.name.hashCode();
 		hash = 7 * hash + this.nationality.hashCode();
 		return hash;
-	}
+	}*/
 
 	@Override
 	public int compareTo(Person object) {

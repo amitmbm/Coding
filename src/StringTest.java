@@ -63,7 +63,8 @@ class q
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) {
+		// commenting to test what will happen if equals always return true 
+	/*	if (this == obj) {
 			return true;
 		}
 		if (obj == null) {
@@ -76,7 +77,7 @@ class q
 		if (b != other.b) {
 			return false;
 		}
-		return true;
+*/		return true;
 	}
 	
 }
@@ -99,8 +100,12 @@ public class StringTest {
 		  System.out.println("printing the hashcode of str"+ str.hashCode());*/
 		
 		HashMap<Object , String > mp = new HashMap<Object,String>();
-		mp.put(new p(1), "abc");
+		
+		// example of creating a hashmap with load factor more than 1 as it can accept the float.
+		HashMap<String, String> map = new HashMap<String, String>(100,10.25f);
+		mp.put(new q(1), "abc");
 		mp.put(new q(2), "def");
+		mp.put(new q(20), "def20");
 		System.out.println("map"+mp);
 	}
 }

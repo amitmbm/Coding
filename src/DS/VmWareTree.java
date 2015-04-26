@@ -1,3 +1,5 @@
+package DS;
+
 //import DS.TreeNode;
 
 //printing kth max element in the tree

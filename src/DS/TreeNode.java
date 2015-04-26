@@ -19,15 +19,16 @@ public class TreeNode
 				+ "]";
 	}
 	
-	public static void print (TreeNode root)
+	// print the inorder traversal
+	public static void printInOrder (TreeNode root)
 	{
         if(root == null)
         	return;
         else
 		{
-			print(root.left);
-			 System.out.println(":"+ root.data);
-			 print(root.right);
+        	printInOrder(root.left);
+			 System.out.print(": "+ root.data);
+			 printInOrder(root.right);
 		}
  
 			

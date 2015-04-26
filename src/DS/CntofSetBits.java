@@ -4,7 +4,7 @@ package DS;
  *  this program will print the total no of set bits
  *  in an array. 
  */
-public class CrowdChat {
+public class CntofSetBits {
 
 	public static void main(String args[]) {
 		int[] arr = { 1, 5, 6, 2, 5 };

@@ -1,22 +1,11 @@
 package DS;
 
 /*
- * This will reverse the LL using the recurseion .
+ * This will reverse the LL using the recurseion , but not the working solution
+ * Another code i have written which was asked in VMware.
  */
 
-class LLNode
-{
-	int data ;
-	LLNode next;
-	
-	LLNode(int data)
-	{
-		this.data = data;
-		this.next=null;
-	}
 
-	
-}
 
 public class LinkReverse {
 

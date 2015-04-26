@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -30,14 +31,27 @@ public class ArrayListEx {
         list.add("abc");
         list.add("def");
         ArrayList<String> array= new ArrayList<String>();
+       
+      
         array.add("abc");
         array.add("def");
         array.add("abc");
         array.add("def");
-        System.out.println("======foreach example which is the now substitute for the itrator=====");
+       // System.out.println("======foreach example which is the now substitute for the itrator=====");
+        Iterator<String> it = array.iterator();
+        System.out.println("ITRATOR EXAMPLE");
+        while(it.hasNext())
+        {
+        	System.out.println(it.next());
+        }
+        System.out.println("====== loop started foreach =======");	
         for(String s : array)
+        {
         	System.out.println("value of the item is::" + s);
-        System.out.println("====== loop completed =======");
+        	//array.remove(s);
+        }
+        	
+       
        // array.add(null);
         Collections.reverse(array);
         Collections.sort(array);

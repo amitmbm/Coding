@@ -48,6 +48,8 @@ public class ReverseLLRecursive {
 		LinkListNode rev = ReverseLLRecursive.reverse(head, null);
 		System.out.println("After reversing the LinkListNode");
 		LinkListNode.printLL(rev);
+		//Thread.currentThread();
+		Thread.dumpStack();
 
 	}
 

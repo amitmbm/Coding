@@ -1,15 +1,20 @@
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 
 
 class Student implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	int rollno;
+	int abc;
+	int def;
+	int feg;
 	String StudentName;
     static String  SchoolName="MHS";
 	public Student(int rollno, String studentName) {
@@ -20,12 +25,22 @@ class Student implements Serializable
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
-	@Override
+/*	@Override
 	public String toString() {
 		return "Student [rollno=" + rollno + ", StudentName=" + StudentName
 				+  "schname::"+ SchoolName+"]";
 	}
-    
+    */
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Student [rollno=" + rollno + ", abc=" + abc + ", def=" + def
+				+ ", feg=" + feg + ", StudentName=" + StudentName + "]";
+	}
+	
+	
     
 	
 	
@@ -38,13 +53,13 @@ public class SerializeEx {
 		//BufferedReader br = new BufferedReader( new InputStreamReader(null));
 		
 		try {
-			FileOutputStream fos = new FileOutputStream("amit.ser");
+		/*	FileOutputStream fos = new FileOutputStream("2.ser");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			oos.writeObject(amit);
 			fos.close();
-			oos.close();
+			oos.close();*/
 			
-			FileInputStream fis = new FileInputStream("amit.ser");
+			FileInputStream fis = new FileInputStream("1.ser");
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			Student st= (Student)ois.readObject();
 			Student.SchoolName="MBM";

@@ -1,6 +1,10 @@
 package DS;
 
-public class Array {
+/*
+ * this is array rotation problem but it will not work for the element 
+ * on which rotation happened.
+ */
+public class ArrayRotation {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

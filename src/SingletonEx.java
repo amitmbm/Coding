@@ -1,4 +1,6 @@
-
+/*
+ * this is not a thread safe impl of singleton 
+ */
 class Singleton {
 
 	public static Singleton singleton ;

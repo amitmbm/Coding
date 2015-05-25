@@ -4,8 +4,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-import org.yaml.snakeyaml.events.SequenceEndEvent;
-
 class Employee implements java.io.Serializable
 {
    public String name;

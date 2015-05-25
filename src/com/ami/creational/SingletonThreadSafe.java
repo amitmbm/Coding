@@ -6,9 +6,14 @@ package com.ami.creational;
 
 class singleton
 {
-	private static volatile singleton instance = null;
+	private  volatile static singleton instance ;
 	private singleton() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public singleton(int i)
+	{
+		
 	}
 	
 	public static singleton getInstance()

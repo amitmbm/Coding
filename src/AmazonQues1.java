@@ -1,4 +1,4 @@
-
+/*
 public class AmazonQues1 {
 	
 	Stack s = new Stack(); 
@@ -59,3 +59,4 @@ static void findRepeatCharacters(String a) {
 
 
 
+*/

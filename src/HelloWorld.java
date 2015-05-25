@@ -6,7 +6,7 @@ public class HelloWorld {
 	public static void main(String args[])
 	{
 		 //int number= 20;
-		int x=10f;
+		float x=10f;
 		
 		/* List<Integer> l = new ArrayList<Integer>();
 		 l.add(10);

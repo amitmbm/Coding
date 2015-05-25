@@ -1,8 +1,10 @@
-
-public final class Test4 {
+/*
+ * it was quetion asked in adobe or some other company
+ */
+public final class InnerClassEx {
 	class Inner {
 		void test() {
-			if (Test4.this.flag)
+			if (InnerClassEx.this.flag)
 				;
 			{
 				sample();
@@ -16,11 +18,11 @@ public final class Test4 {
 		System.out.println("Sample");
 	}
 
-	public Test4() {
+	public InnerClassEx() {
 		(new Inner()).test();
 	}
 
 	public static void main(String args[]) {
-		new Test4();
+		new InnerClassEx();
 	}
 }

@@ -4,8 +4,12 @@ public class LCAncestorTree {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		TreeNode root = TreeNode.getBSTTree();
+		TreeNode root= new TreeNode(10);
+		root.left=new TreeNode(2);
+		root.right=new TreeNode(16);
+		root.left.left= new TreeNode(1);
+		root.left.right= new TreeNode(16);
+		//TreeNode root = TreeNode.getBSTTree();
 		System.out.println("printing out the BST"); 
 		TreeNode.printInOrder(root);
 		

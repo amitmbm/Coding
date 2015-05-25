@@ -1,9 +1,6 @@
-
+import java.io.*;
+import java.util.*;
 public class AirPushTest {
-
-	import java.io.*;
-	import java.util.*;
-	public class Solution {
 	    
 	     public static int evaluateString(String ex)
 	    {
@@ -136,4 +133,4 @@ public class AirPushTest {
 	        
 	}
 	
-}
+
